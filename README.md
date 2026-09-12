@@ -51,4 +51,4 @@ python analysis/pca.py results/analysis_table.csv
 python analysis/model_cv.py results/analysis_table.csv
 ```
 
-The follow-on manuscript work is still in progress, so this repository is mainly a record of the computational analysis rather than a data release.
+The follow-on manuscript work is still in progress, so this repository is mainly a record of the computational analysis 
