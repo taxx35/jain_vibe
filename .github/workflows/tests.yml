@@ -1,0 +1,19 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - run: python examples/make_synthetic_demo.py
+      - run: python analysis/paired_sequence_groups.py examples/synthetic_antibodies.csv --threshold 0.90 --out results/synthetic_grouped.csv
+      - run: python analysis/grouped_regression.py results/synthetic_grouped.csv --target VIBE1 --group-col sequence_group --feature-prefix feat_ --log-target --inner-splits 3
