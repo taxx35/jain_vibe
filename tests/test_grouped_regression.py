@@ -21,7 +21,7 @@ def make_small_problem(seed=0):
 def test_perfect_monotonic_prediction_has_spearman_one():
     y = np.array([1, 2, 3, 4, 5], dtype=float)
     pred = np.array([10, 20, 30, 40, 50], dtype=float)
-    assert mod.regression_metrics(y, pred)["spearman"] == 1.0
+    assert np.isclose(mod.regression_metrics(y, pred)["spearman"], 1.0, atol=1e-12)
 
 
 def test_group_overlap_is_rejected():
