@@ -32,7 +32,7 @@ The repository now includes a synthetic paired-chain benchmark derived from the 
 - `analysis/paired_sequence_groups.py` — deterministic grouping of aligned VH/VL pairs by a fully specified paired-chain identity rule;
 - `analysis/grouped_regression.py` — nested `GroupKFold` regression with fold-contained scaling, PCA and Ridge tuning;
 - `examples/make_synthetic_demo.py` — generates synthetic aligned antibody-like VH/VL sequences, sequence-derived features and a continuous target with planted family structure;
-- `examples/synthetic_antibodies.csv` — generated synthetic data only;
+- `examples/synthetic_antibodies.csv` — generated locally by the synthetic-data script and intentionally not committed;
 - `tests/test_paired_sequence_groups.py` — identity, transitivity and threshold-sensitivity tests;
 - `tests/test_grouped_regression.py` — leakage, out-of-fold coverage and preprocessing-isolation tests;
 - `TASK_EXAMPLE.md` — an example AI-evaluation task derived from the research problem;
